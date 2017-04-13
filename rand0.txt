@@ -1,0 +1,21 @@
+#define iA 843314861
+#define iB 453816693
+#define iM 1073741824
+
+
+int isem=123456789;
+
+
+float rand0();
+
+
+float rand0()
+{
+  float aux, x;
+  aux = 0.5 / iM;
+  isem = isem*iA + iB;
+  if (isem < 0)
+    isem = (isem + iM) + iM;
+  x = isem*aux;
+  return x;
+}
